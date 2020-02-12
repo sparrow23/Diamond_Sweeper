@@ -1,14 +1,29 @@
-table.diamondsweeper-board {
-  td {
-    padding: 0;
-    border: 1px solid black;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-view {
+  background:beige;
+  padding: 3rem;
+  border: 1rem solid black;
+  table.diamondsweeper-board {
+    td {
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 0.5rem;
+    }
   }
 }
 
+
 .cell {
-  height: 50px;
-  width: 50px;
-  background-size: 50px 50px;
+  height: 70px;
+  width: 70px;
+  background-size: 70px 70px;
+  border-radius: 0.5rem;
 
   &.diamond {
     background-image: url(diamond.png);
@@ -21,4 +36,55 @@ table.diamondsweeper-board {
   &.unknown {
     background-image: url(question.png);
   }
+}
+
+@media (max-width: 900px) {
+  .cell {
+    height: 50px;
+    width: 50px;
+    background-size: 50px 50px;
+    border-radius: 0.25rem;
+  } 
+}
+
+@media (max-width: 700px) and (min-width: 565px) {
+  .main-view {
+    background:beige;
+    padding: 2rem;
+    border: 1rem solid black;
+    table.diamondsweeper-board {
+      td {
+        padding: 3px;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+  .cell {
+    height: 35px;
+    width: 35px;
+    background-size: 35px 35px;
+    border-radius: 0.2rem;
+  } 
+}
+
+@media (max-width: 560px) {
+  .main-view {
+    background:beige;
+    padding: 1.5rem;
+    border: 1rem solid black;
+    table.diamondsweeper-board {
+      td {
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+  .cell {
+    height: 25px;
+    width: 25px;
+    background-size: 25px 25px;
+    border-radius: 0.18rem;
+  } 
 }
